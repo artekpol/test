@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %}
+{% block title %}kalkulator{% endblock %}
+{% block subtitle %}kalkulator kredytowy{% endblock %}
+{% block body %}
+    <div class="row-fluid">
+        <div class="span4">
+            <form id="loan-calculator" class="form-horizontal" method="POST">
+                {{ form_widget(form, {'form_type': 'horizontal'}) }}
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn">Oblicz</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="span8" id="installments-table">
+            {%include 'ItelixInvestmentLoanCalculatorBundle:Default:_installment-table.html.twig' with{'installments': installments}%}
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function(){
+            $("#loan-calculator").validationEngine();
+            oFormDataSender = new FormDataSender('#loan-calculator', '#installments-table');
+            oFormDataSender.run();
+        });
+    </script>
+{% endblock %}

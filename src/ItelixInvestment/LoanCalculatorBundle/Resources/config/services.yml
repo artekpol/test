@@ -1,0 +1,9 @@
+parameters:
+#    itelix_investment_loan_calculator.example.class: ItelixInvestment\LoanCalculatorBundle\Example
+
+services:
+    loan_calculator.service_repository:
+        class: 'ItelixInvestment\LoanCalculatorBundle\Repository\Service'
+        arguments: [@service_container]
+    loan_calculator.loan_distribution:
+        class: 'ItelixInvestment\LoanCalculatorBundle\Calculator\LoanDistribution'

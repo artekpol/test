@@ -1,0 +1,5 @@
+#installments-table table tr th,
+#installments-table table tr td,
+#loan-calculator input{
+    text-align: right;
+}

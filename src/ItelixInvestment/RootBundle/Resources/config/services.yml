@@ -1,0 +1,7 @@
+parameters:
+#    itelix_investment_root.example.class: ItelixInvestment\RootBundle\Example
+
+services:
+#    itelix_investment_root.example:
+#        class: %itelix_investment_root.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

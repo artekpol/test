@@ -1,0 +1,4 @@
+itelix_investment_loan_calculator:
+    resource: "@ItelixInvestmentLoanCalculatorBundle/Resources/config/routing.yml"
+    prefix:   /
+

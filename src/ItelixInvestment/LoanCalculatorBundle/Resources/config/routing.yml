@@ -1,0 +1,3 @@
+itelix_investment_loan_calculator_homepage:
+    pattern:  /
+    defaults: { _controller: ItelixInvestmentLoanCalculatorBundle:Default:index }

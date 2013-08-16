@@ -1,0 +1,20 @@
+{% if installments is not empty %}
+    <table class="table table-bordered table-condensed">
+        <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Rata (zł)</th>
+            <th>Łącznie (zł)</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for installment in installments %}
+            <tr>
+                <td>{{ installment.no }}</td>
+                <td>{{ installment.amount|number_format(2, ',', ' ') }}</td>
+                <td>{{ installment.cumulativeAmount|number_format(2, ',', ' ') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
